@@ -1,0 +1,44 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #000;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+#ui {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+}
+
+.love_word {
+    position: absolute;
+    color: #e079e0;
+    font-size: 1.4rem;
+    text-shadow: 0 0 10px #050303, 0 0 20px #fc3599;
+    letter-spacing: 2px;
+    white-space: nowrap;
+    animation: flutuar 3s ease-in-out infinite alternate;
+    animation-delay: calc(var(--i) * 0.05s);
+}
+
+@keyframes flutuar {
+    0% {
+        transform: translateY(0px) rotateZ(-10deg) scale(1);
+        opacity: 0.7;
+    }
+    50% {
+        transform: translateY(-30px) rotateZ(10deg) scale(1.1);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-60px) rotateZ(-10deg) scale(0.9);
+        opacity: 0.5;
+    }
+}
